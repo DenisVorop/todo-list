@@ -26,15 +26,26 @@ export const App: React.FC = () => {
         }))
     }
 
-    return <div>
-        <NewTodo
-            setTodos={setTodos}
-            todos={todos}
-        />
-        <TodoList
-            items={todos}
-            removeTodo={removeTodo}
-            toggleTodo={toggleTodo}
-        />
-    </div>
+    return (
+        <div style={{
+            height: '100vh',
+            width: '100vw',
+            display: 'flex',
+            justifyContent: 'center',
+        }}
+        >
+            <div>
+                <h2 style={{ textAlign: 'center' }}>Todo List</h2>
+                <NewTodo
+                    setTodos={setTodos}
+                    todos={todos}
+                />
+                <TodoList
+                    items={todos}
+                    removeTodo={removeTodo}
+                    toggleTodo={toggleTodo}
+                />
+            </div>
+        </div>
+    )
 }

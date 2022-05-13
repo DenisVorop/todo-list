@@ -38,13 +38,20 @@ export const NewTodo: React.FC<INewTodo> = ({ setTodos, todos }) => {
     }
 
     return (
-        <div>
+        <div style={{
+            padding: '10px',
+            border: '.5px solid #000',
+            marginBottom: '10px',
+        }}>
             <input
                 type="text"
                 value={value}
                 ref={inputRef}
                 onChange={handleChangeInput}
                 onKeyDown={handleKeyDown}
+                style={{
+                    marginRight: '10px',
+                }}
             />
             <button onClick={addTodo}>add</button>
         </div>
